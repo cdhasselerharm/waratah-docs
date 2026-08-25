@@ -7,27 +7,10 @@ theme:
   features:
     - navigation.sections
     - navigation.expand
+    - navigation.indexes
     - content.code.copy
     - search.suggest
     - search.highlight
   
 plugins:
   - search
-
-nav:
-  - Home: index.md
-
-  - Acoustics:
-    - acoustics/index.md
-    - AviaNZ:
-      - acoustics/avianz/avianz.md
-    - BirdNET:
-      - acoustics/birdnet/birdnet.md
-    - PKE Meter:
-      - acoustics/pke-meter/pke-meter.md
-  
-  - Data Management:
-    - data_management/index.md
-  
-  - General:
-    - general/index.md
