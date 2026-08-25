@@ -8,7 +8,8 @@ module load slurm
 ```
 3. Adjust AviaNZ script to your site and copy to your MobaXterm ssh session (right-click to paste -> continue -> enter)
 ```bash
-sbatch --job-name=WEB1_avianz \
+sbatch \
+--job-name=WEB1_avianz \
 --mail-user={EMAIL}@dcceew.nsw.gov.au \
 /mnt/scratch_lustre/ww_wbfa_scratch/scripts/avianz.sh \
 -d /mnt/scratch_lustre/ww_wbfa_scratch/data/acoustic_data/uploads/Murrumbidgee/202526 \
@@ -16,7 +17,6 @@ sbatch --job-name=WEB1_avianz \
 -m 8 -M 10 \
 -t 17 -T 23 \
 -r Southern_Bell_Frog_GV_130125 \
---trim \
 -c 5
 ```
 Details:  
@@ -29,9 +29,8 @@ Details:
 -M (end month of interest - 10 = October)  
 -t (start time - 17 = 5pm)  
 -T (end time - 07 = 7am)  
--r (recogniser name saved in recoginsers folder)  
---trim (tells script to trim files - leave even if not trimming)  
--c (file duration - 5 = 5mins)  
+-r (recogniser name saved in recoginsers folder)   
+-c (clip duration - 5 = first 5mins of file)  
 
 
 ## Retrieve AviaNZ files from Waratah
