@@ -1,4 +1,4 @@
-# Waratah docs (Fauna WWT)
+# About
 
 A collection of documentation for data management and processing on Waratah 
 
