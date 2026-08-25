@@ -1,0 +1,27 @@
+site_name: Waratah docs (Fauna WWT)
+site_description: A collection of documentation for data management and processing on Waratah 
+
+theme:
+  name: material
+
+  features:
+    - navigation.sections
+    - navigation.expand
+    - content.code.copy
+    - search.suggest
+    - search.highlight
+  
+plugins:
+  - search
+
+nav:
+  - Home: index.md
+
+  - Acoustics:
+    - acoustics/index.md
+  
+  - Data Management:
+    - data_management/index.md
+  
+  - General:
+    - general/index.md
