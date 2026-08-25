@@ -1,4 +1,4 @@
-# AviaNZ
+# Usage
 ## Run AviaNZ on Waratah/SDC
 
 1. Open MobaXterm and start an ssh session
