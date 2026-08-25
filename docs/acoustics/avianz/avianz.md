@@ -9,7 +9,7 @@ module load slurm
 3. Adjust AviaNZ script to your site and copy to your MobaXterm ssh session (right-click to paste -> continue -> enter)
 ```bash
 sbatch --job-name=WEB1_avianz \
---mail-user=chris.d.hasselerharm@dcceew.nsw.gov.au \
+--mail-user={EMAIL}@dcceew.nsw.gov.au \
 /mnt/scratch_lustre/ww_wbfa_scratch/scripts/avianz.sh \
 -d /mnt/scratch_lustre/ww_wbfa_scratch/data/acoustic_data/uploads/Murrumbidgee/202526 \
 -s WEB1 \
@@ -35,11 +35,12 @@ Details:
 
 
 ## Retrieve AviaNZ files from Waratah
-1. Login to remote PC - Using instead of your laptop because it has faster internet and will keep running if you close down your laptop
+1. Login to remote PC - Use instead of your laptop because it has faster internet and will keep running if you close down your laptop
 2. Open MobaXterm and a bash terminal - [Download](https://mobaxterm.mobatek.net/download-home-edition.html) the portable edition of MobaXterm which has the necessary plugins for using the bash terminal
 3. Adjust rsync script:
-    - username (Currently hasselec)
+    - USERNAME (replace with Waratah username)
+    - HOSTNAME (replace with Waratah Host name sdclogin...)
     - filepaths (Currently this will copy the NIM1 folder to the 05_2025-26 folder on the m drive)
 ```bash
-rsync -av --progress --no-times --no-perms -e ssh hasselec@sdclogin02.irs.environment.nsw.gov.au:/mnt/scratch_lustre/ww_wbfa_scratch/data/avianz/processed/NIM1 "/drives/m/themes/wetlands/EFlowMonitoring/Murrumbidgee/40_FrogData/02_Audio/data/05_2025-26/"
+rsync -av --progress --no-times --no-perms -e ssh {USERNAME}@{HOSTNAME}:/mnt/scratch_lustre/ww_wbfa_scratch/data/avianz/processed/NIM1 "/drives/m/themes/wetlands/EFlowMonitoring/Murrumbidgee/40_FrogData/02_Audio/data/05_2025-26/"
 ```
